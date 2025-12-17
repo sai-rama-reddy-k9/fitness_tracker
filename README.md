@@ -1,6 +1,6 @@
 # FitTrack - Personal Workout Logger 🏋️
 
-A full-stack web application for tracking workouts and fitness progress, built for a hackathon.
+A full-stack web application for tracking workouts and fitness progress.
 
 ## 🚀 Features
 
