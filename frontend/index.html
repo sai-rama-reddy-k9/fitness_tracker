@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack - Personal Workout Logger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏋️ FitTrack</h1>
+            <p>Log your workouts and track progress</p>
+        </header>
+
+        <!-- Auth Section -->
+        <div id="authSection">
+            <div class="auth-container">
+                <!-- Login Form (shown by default) -->
+                <div id="loginContainer">
+                    <div class="auth-form">
+                        <h3>Login to Your Account</h3>
+                        <form id="loginForm">
+                            <input type="text" id="loginUsername" placeholder="Username" required>
+                            <input type="password" id="loginPassword" placeholder="Password" required>
+                            <button type="submit" class="auth-btn login-btn">Login</button>
+                        </form>
+                        <p class="auth-switch">
+                            Don't have an account? 
+                            <a href="#" id="showRegister" onclick="switchToRegister()">Register here</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Register Form (hidden initially) -->
+                <div id="registerContainer" style="display: none;">
+                    <div class="auth-form">
+                        <h3>Create New Account</h3>
+                        <form id="registerForm">
+                            <input type="text" id="registerUsername" placeholder="Username" required>
+                            <input type="password" id="registerPassword" placeholder="Password (min 6 characters)" required>
+                            <button type="submit" class="auth-btn register-btn">Register</button>
+                        </form>
+                        <p class="auth-switch">
+                            Already have an account? 
+                            <a href="#" id="showLogin" onclick="switchToLogin()">Login here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main App (hidden initially) -->
+        <div id="appSection" style="display: none;">
+            <div class="user-info">
+                <span>Welcome, <span id="usernameDisplay"></span>!</span>
+                <button id="logoutBtn">Logout</button>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="stats-section">
+                <h3>Your Fitness Stats</h3>
+                <div class="stats-grid" id="statsContainer">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalWorkouts">0</div>
+                        <div class="stat-label">Total Workouts</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalMinutes">0</div>
+                        <div class="stat-label">Minutes Exercised</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalCalories">0</div>
+                        <div class="stat-label">Calories Burned</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <!-- Workout Log Form -->
+                <div class="workout-form">
+                    <h3>Log New Workout</h3>
+                    <form id="workoutForm">
+                        <input type="text" id="exercise" placeholder="Exercise (e.g., Pushups)" required>
+                        <input type="number" id="duration" placeholder="Duration (minutes)" required>
+                        <input type="number" id="calories" placeholder="Calories burned" required>
+                        <button type="submit">Add Workout</button>
+                    </form>
+                </div>
+
+                <!-- Social Feed -->
+                <div class="social-feed">
+                    <h3>Recent Community Workouts</h3>
+                    <div id="feedList">
+                        <p>Loading community activities...</p>
+                    </div>
+                </div>
+
+                <!-- Workout History -->
+                <div class="workout-history">
+                    <h3>Your Workouts</h3>
+                    <div id="workoutList">
+                        <p>No workouts logged yet. Add your first workout!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

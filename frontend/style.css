@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 1.1em;
+}
+
+/* Auth Container */
+.auth-container {
+    width: 100%;
+}
+
+.auth-form {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.auth-form h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 15px 0;
+}
+
+.login-btn {
+    background: #27ae60;
+    color: white;
+}
+
+.login-btn:hover {
+    background: #219a52;
+}
+
+.register-btn {
+    background: #3498db;
+    color: white;
+}
+
+.register-btn:hover {
+    background: #2980b9;
+}
+
+.auth-switch {
+    color: #7f8c8d;
+    margin-top: 20px;
+}
+
+.auth-switch a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+#logoutBtn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#logoutBtn:hover {
+    background: #c0392b;
+}
+
+/* Workout Forms */
+.workout-form {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.workout-form h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.workout-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.workout-form button {
+    background: #3498db;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.workout-form button:hover {
+    background: #2980b9;
+}
+
+/* Workout History */
+.workout-history {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.workout-item {
+    background: white;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.workout-item strong {
+    color: #2c3e50;
+    font-size: 1.2em;
+}
+
+.workout-item small {
+    color: #7f8c8d;
+}
+/* Statistics Section */
+.stats-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.stats-section h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* Social Feed */
+.social-feed {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.feed-item {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #27ae60;
+}
+
+.feed-item .username {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.feed-item .exercise {
+    color: #3498db;
+}
+/* View More/Less Links */
+.view-more-link {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.view-more-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.view-more-link a:hover {
+    text-decoration: underline;
+}
+/* Social Feed */
+.social-feed {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.feed-item {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #27ae60;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feed-details {
+    flex: 1;
+}
+
+.feed-meta {
+    text-align: right;
+    min-width: 120px;
+}
+
+.feed-item .username {
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.feed-item .exercise {
+    color: #3498db;
+}
+
+.feed-meta .calories {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.feed-meta .date {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+/* Workout Items - Same style for both personal and community */
+.workout-item, .feed-item {
+    background: white;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Different border color for community feed */
+.feed-item {
+    border-left-color: #27ae60;
+}
+
+.workout-details, .feed-details {
+    flex: 1;
+}
+
+.workout-meta, .feed-meta {
+    text-align: right;
+    min-width: 120px;
+}
+
+.workout-item strong, .feed-item .username {
+    color: #2c3e50;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.feed-item .username {
+    color: #2c3e50;
+}
+
+.workout-item .exercise-duration, .feed-item .activity {
+    color: #7f8c8d;
+}
+
+.feed-item .exercise {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.workout-meta .calories, .feed-meta .calories {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.1em;
+}
+
+.workout-meta .date, .feed-meta .date {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* View More/Less Links */
+.view-more-link {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.view-more-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.view-more-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* Statistics Section */
+.stats-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.stats-section h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+/* Delete Buttons */
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top:4px;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+.feed-item .delete-btn {
+    display: none; /* Hide delete button from community feed by default */
+}
+
+/* Show delete button only on user's own feed items */
+.feed-item[data-current-user="true"] .delete-btn {
+    display: inline-block;
+}
